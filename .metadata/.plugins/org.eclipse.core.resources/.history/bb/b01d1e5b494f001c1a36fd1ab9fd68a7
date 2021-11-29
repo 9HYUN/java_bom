@@ -1,0 +1,13 @@
+package ch10;
+
+public class TypeConvertionTest {
+
+	public static void main(String[] args) {
+		
+		byte bNum = 125;
+		int iNum = bNum;
+		
+		System.out.println(iNum);
+	}
+
+}
