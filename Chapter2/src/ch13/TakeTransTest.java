@@ -13,6 +13,7 @@ public class TakeTransTest {
 		
 		Subway greenSubway = new Subway(2);
 		Subway blueSubway = new Subway(3);
+		
 		studentT.takeSubway(greenSubway);
 		studentJ.showInfo();
 		studentT.showInfo();

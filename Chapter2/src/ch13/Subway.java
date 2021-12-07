@@ -13,6 +13,7 @@ public class Subway
 		
 	}
 	
+		
 	public void take(int money)
 	{
 		
