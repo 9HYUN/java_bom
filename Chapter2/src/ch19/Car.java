@@ -2,19 +2,29 @@ package ch19;
 
 public class Car {
 	
-	private static int carNum = 10000;
-	private int creatCar;
-	private Car() 
+	private static int serialNum = 10000;
+	private int carNum;
+	
+	public Car() 
 	{
-		carNum++;
-		creatCar = carNum; 
-
+		serialNum++;
+		carNum = serialNum; 
 	}
-	public int getCreatCar() {
-		return creatCar;
+	public int getCarNum() 
+	{
+		return carNum;
 	}
 	
+	public void setCarNum(int carNum) 
+	{
+		this.carNum = carNum;
+	}
 	
-	
+	public static Car createCar()
+	{
+		Car car = new Car();
+		return car;
+	}
 	
 }
+	

@@ -14,5 +14,11 @@ public class CarFactory {
 		}
 		return instance;
 	}
+	
+//	public Car createCar()
+//	{
+//		Car car = new Car();
+//		return car;
+//  여기 있으면 작동안됨 ..; 	
 
 }
