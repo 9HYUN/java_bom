@@ -13,11 +13,39 @@ public class ObjectCopyTest {
 		library[3] = new Book("태백산맥4", "조정래");
 		library[4] = new Book("태백산맥5", "조정래");
 		
+		
+		//System.arraycopy(library, 0, copyLibrary, 0, 5);
+		//address 까지 copy
+		
+		copyLibrary[0] = new Book();
+		copyLibrary[1] = new Book();
+		copyLibrary[2] = new Book();
+		copyLibrary[3] = new Book();
+		copyLibrary[4] = new Book();
+		
+		for(int i = 0 ; i < library.length; i++)
+		{
+			copyLibrary[i].setAuthor(library[i].getAuthor());
+			copyLibrary[i].setTitle(library[i].getTitle());
+		}
+		
+		library[0].setAuthor("박완서");
+		library[0].setTitle("나무");
+		
+		
+		System.out.println("==library==");
 		for(Book book : library)
 		{
 			System.out.println(book);
 			book.showInfo();
 		}
+		System.out.println("==copy library==");
+		for(Book book : copyLibrary)
+		{
+			System.out.println(book);
+			book.showInfo();
+		}
+
 	}
 	
 
