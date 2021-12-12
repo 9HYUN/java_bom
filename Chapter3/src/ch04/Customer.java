@@ -4,6 +4,7 @@ public class Customer
 {
 	//private 외부와 하위 class에서 접근 불가
 	//protected: 외부 class 접근 불가 하위 class 접근 가능
+	
 	protected int customerID;
 	protected String customerName;
 	protected String customerGrade;
