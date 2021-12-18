@@ -1,6 +1,6 @@
 package ch02;
 
-public class Student 
+public class Student implements Cloneable
 {
 	private int studentNum;
 	private String studentName;
@@ -11,6 +11,10 @@ public class Student
 		this.studentNum = studentnum;
 	}
 	
+	public void setStudentName(String name)
+	{
+		this.studentName = name;
+	}
 	public String toString()
 	{
 		return studentNum + "," + studentName;
@@ -33,6 +37,12 @@ public class Student
 			else return false; 
 		}
 		return super.equals(obj);
+	}
+
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		return super.clone();
 	}
 	
 }
