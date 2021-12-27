@@ -8,7 +8,6 @@ public class Plastic extends Material
 
 	@Override
 	public void doPrinting() {
-		// TODO Auto-generated method stub
 		
 	}
 }

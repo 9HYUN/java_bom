@@ -24,6 +24,7 @@ public class GenericPrintTest
 		
 		Plastic pl = plasticPrinter.getMaterial();
 		System.out.println(plasticPrinter.toString());
+		
 	}
 
 }
