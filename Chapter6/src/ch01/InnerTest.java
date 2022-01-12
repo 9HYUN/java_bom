@@ -1,42 +1,75 @@
 package ch01;
 
 
-class OutClass{
+class OutClass
+{
 	private int num = 10;
 	private static int sNum = 20;
 	private InClass inClass;
 	
-	public OutClass() {
+	public OutClass() 
+	{
 		inClass = new InClass();
 	}
 	
-	
-	private class InClass{ //<-- private 선언 
+	private class InClass //<-- private 선언 
+	{ 
 		int iNum = 100;
 		
-		void inTest() {
+		void inTest() 
+		{
 			System.out.println("OutClass num = " +num + "(외부 클래스의 인스턴스 변수)");
 			System.out.println("OutClass sNum = " +sNum + "(외부 클래스의 스태틱 변수)");
 			System.out.println("InClass iNum = " +iNum + "(내부 클래스의 인스턴스 변수)");
 		}
 	}
 	
-	public void usingClass() {
+	public void usingClass() 
+	{
 		inClass.inTest();
 	}
 	
+	static class InStaticClass 
+	{
+		int iNum = 100;
+		static int sInNum = 200;
+		
+		void inTest() 
+		{
+			System.out.println("OutClass iNum = " +iNum + "(내부 클래스의 인스턴스 변수)");
+			System.out.println("OutClass sNum = " +sNum + "(외부 클래스의 스태틱 변수)");
+			System.out.println("InClass sNum = " +sInNum + "(내부 클래스의 스태틱 변수)");
+		
+	    }
+	
+	
+		static void sTest() 
+		{
+			System.out.println("OutClass sNum = " +sNum + "(외부 클래스의 스태틱 변수)");
+			System.out.println("InClass sInNum = " +sInNum + "(내부 클래스의 스태틱 변수)");
+		}
+	}
 	
 }
 
-public class InnerTest {
+public class InnerTest 
+{
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		
-		OutClass outClass = new OutClass();
-		outClass.usingClass();
+//		OutClass outClass = new OutClass();
+//		outClass.usingClass();
 		
 //		OutClass.InClass inner = outClass.new InClass();
 //		inner.inTest();             <-- InClass가 private 선언 했으므로 이렇게는 사용 불가
+		
+		
+		OutClass.InStaticClass sInClass = new OutClass.InStaticClass();
+		sInClass.inTest();
+		System.out.println();
+		OutClass.InStaticClass.sTest();
 	}
-
 }
+
+
