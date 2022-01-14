@@ -1,0 +1,12 @@
+1월 14, 2022 10:03:36 오후 ch11.MyLogger log
+INFO: log test
+1월 14, 2022 10:03:36 오후 ch11.MyLogger log
+WARNING: log test
+1월 14, 2022 10:03:36 오후 ch11.MyLogger log
+SEVERE: log test
+1월 14, 2022 10:12:10 오후 ch11.MyLogger log
+INFO: log test
+1월 14, 2022 10:12:10 오후 ch11.MyLogger log
+WARNING: log test
+1월 14, 2022 10:12:10 오후 ch11.MyLogger log
+SEVERE: log test
